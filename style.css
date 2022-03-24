@@ -63,7 +63,7 @@ nav {
 	font-size: 44px;
 	font-weight: 500;
 	background: linear-gradient(to right, #494964, #6f6f89);
-	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 .intro-text p {
@@ -100,11 +100,20 @@ nav {
 	justify-content: center;
 	height: 60vh;
 }
-.cover img {
+#image1{
 	height: 100%;
 	filter: drop-shadow(0px 5px 3px black);
 	animation: drop 1.5s ease;
 }
+
+#image2{
+	display: none;
+	height: 100%;
+	filter: drop-shadow(0px 5px 3px black);
+	animation: drop 1.5s ease;
+	
+}
+
 
 .big-circle {
 	position: absolute;
@@ -148,7 +157,12 @@ nav {
 	}
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 700px) {
+
+	body{
+		overflow: hidden;
+		align-items: center;
+	}	
 	.presentation {
 		flex-direction: column;
 	}
@@ -157,10 +171,10 @@ nav {
 		text-align: center;
 	}
 	.intro-text h1 {
-		font-size: 30px;
+		font-size: 2rem;
 	}
 	.intro-text p {
-		font-size: 18px;
+		font-size: 1rem;
 	}
 	.cta {
 		padding: 10px 0px 0px 0px;
@@ -171,9 +185,16 @@ nav {
 		width: 50%;
 		transform: translate(50%, 5%);
 	}
-	.cover img {
-		height: 80%;
+
+	#image1{
+		display: none;
 	}
+	#image2{
+		display: flex;
+		width: 90%;
+		border-radius: 1rem;
+	}
+
 	.small-circle,
 	.medium-circle,
 	.big-circle {
